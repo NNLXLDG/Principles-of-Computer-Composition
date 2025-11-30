@@ -1,2 +1,11 @@
-# 8086-Microprocessor-Learning
-This repository contains knowledge related to the 8086 Microprocessor, including practice problems and a structured learning framework.
+# Principles of Computer Composition 计算机组成原理
+
+本仓库用于整理和沉淀《计算机组成原理》课程相关的系统化笔记，用于本人考研复习与查阅。
+
+目前主要包含三个核心部分：
+
+- `数据的表示与运算`：对应课程的第二章，说明各类进制、BCD 码、字符与字符串编码、校验码（奇偶校验、海明码、CRC 等）、定点/浮点数表示及相关性能指标等内容。
+- `8086指令系统`：以 8086 为例系统讲解指令系统，包括寻址方式、数据传送指令、算术与逻辑运算、控制转移指令、汇编语言基础、伪指令、DOS/BIOS 中断调用等。
+- `存储系统`：梳理主存、Cache、外存等存储体系结构以及容量、带宽、速度等关键性能指标（内容在 `存储系统.md` 中）。
+
+持续更新中...
