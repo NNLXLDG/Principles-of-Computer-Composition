@@ -1379,7 +1379,7 @@ DATA_WORD  DW 100H,100,-4
 DATA_DWORD  DD 2*30,0FFFBH
 ```
 
-![alt text](IMG_1961.jpeg)
+![alt text](./.assets/IMG_1961.jpeg)
 
 
 ##### **字符串**
@@ -1413,7 +1413,7 @@ BUFFER DW TABLE,$+3
 
 设TABLE的偏移地址为0080H,则汇编后如下图所示：
 
-![alt text](image-6.png)
+![alt text](./.assets/image-6.png)
 
 
 
@@ -2009,7 +2009,7 @@ JE DONE
 **AX = 0，ZF = 1，IP 指向 DONE 标号处指令的偏移地址**
 #### 题目三
 
-![alt text](image-7.png)
+![alt text](./.assets/image-7.png)
 
 
 假设数据段的起始地址为`DS:0000H`（这里`DS`为数据段寄存器），按照字节组织，数据在内存中的存放如下：
@@ -2044,7 +2044,7 @@ JE DONE
 
 ### 5.1 存储器的分类与组成
 
-![alt text](image-13.png)
+![alt text](./.assets/image-13.png)
 
 #### 5.1.1 内存与外存（按连接方式）
 - **内存（主存）**  
@@ -2137,7 +2137,7 @@ JE DONE
 - **示例芯片**：6116（2K×8位）  
   - **引脚**：11位地址线（A0~A10）、8位数据线、片选（CE）、读写控制（OE、WE）。  
 
-![alt text](image-14.png)
+![alt text](./.assets/image-14.png)
 
 
 
@@ -2155,7 +2155,7 @@ JE DONE
 - **示例芯片**：2116（16K×1位）  
   - **引脚**：分时复用地址线（行地址+列地址）、RAS（行选通）、CAS（列选通）。  
 
-![alt text](image-15.png)
+![alt text](./.assets/image-15.png)
 
 + 存储地址需要分两批传送，行地址选通信号RAS*有效，开始传送行地址
 + 随后，列地址选通信号CAS*有效，传送列地址，CAS*相当于片选信号
@@ -2180,7 +2180,7 @@ JE DONE
 - **引脚**：  
   - 11位地址线（A0~A10）、8位数据线、片选（CS）、编程电压（VPP）。  
 
-![alt text](image-16.png)
+![alt text](./.assets/image-16.png)
 
 
 
@@ -2196,14 +2196,14 @@ JE DONE
    - **方法**：各芯片数据线分别连接数据总线的不同位，地址线和控制线并联。  
    - **示例**：8片1K×1芯片 → 1K×8存储器。
   
-![alt text](image-17.png)
+![alt text](./.assets/image-17.png)
 
 1. **地址扩展**  
    - **目标**：增加存储单元数量（如多片8位芯片拼成更大容量）。  
    - **方法**：使用译码器（如74LS138）生成片选信号，分配不同的地址范围。  
    - **示例**：4片16K×8芯片 → 64K×8存储器。  
 
-![alt text](image-18.png)
+![alt text](./.assets/image-18.png)
 
 #### 5.5.2 连接CPU的关键步骤
 
@@ -2422,7 +2422,7 @@ JE DONE
 
 
 
-![alt text](image-9.png)
+![alt text](./.assets/image-9.png)
 
 + CLK（时钟信号 ）
 CLK是系统的基本时钟信号，为整个系统的操作提供时间基准。图中的 \( T_1 - T_4 \) 是时钟周期，用于划分和同步总线操作的不同阶段 。一个总线周期通常包含若干个时钟周期，不同的操作在相应的时钟周期内完成。 
@@ -2450,7 +2450,7 @@ ALE是输出信号。在总线周期的 \( T_1 \) 状态时，ALE有效（一般
 对于内部中断（软件中断 ），如 INT n 指令、断点中断、溢出中断、除法出错中断、单步中断等，其触发是由执行指令或指令执行结果导致 。与可屏蔽中断不同，内部中断不需要通过外部硬件中断源申请并经中断响应总线周期来获取中断类型号。内部中断的类型号是固定的或由指令指定（如 INT n 指令中的 n ），所以不需要执行上述中断响应总线周期去获取中断类型号。
 
 
-![alt text](image-10.png)
+![alt text](./.assets/image-10.png)
 
 
 **什么是单步中断？**    
@@ -2483,7 +2483,7 @@ POPF       ;新标志值-> FLAGS
   - **INT 1**：单步中断。  
   - **INT 3**：断点中断。
   - **INT 4**：溢出中断。  
-![alt text](image-11.png)
+![alt text](./.assets/image-11.png)
 
 - **可编程中断**：通过8259A控制器管理（IRQ0~IRQ7）。  
 
@@ -2493,7 +2493,7 @@ POPF       ;新标志值-> FLAGS
 
 
 #### 6.4.3 8086中断响应流程
-![alt text](image-12.png)
+![alt text](./.assets/image-12.png)
 
 
 1. **指令执行阶段**：CPU先进行取指令操作，然后执行当前指令。执行完指令后，判断指令是否执行完毕。若未执行完，继续执行；若执行完，进入中断判断流程。
@@ -2568,7 +2568,7 @@ DMA写存储器：存储器 ← 外设
 - **HLDA**：总线保持响应信号，用于DMA控制权切换。  
 
 ---
-![alt text](image-8.png)
+![alt text](./.assets/image-8.png)
 
 
 
